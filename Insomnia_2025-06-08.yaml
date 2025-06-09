@@ -14,12 +14,12 @@ collection:
       sortKey: -1749156914467
       description: ""
     children:
-      - url: http://localhost:3333/api/rural-producers
+      - url: "{{ _.base_url }}/rural-producers"
         name: Create
         meta:
           id: req_4f519e253ad14dd99d75e4640a032c26
           created: 1749156917450
-          modified: 1749312011124
+          modified: 1749437133973
           isPrivate: false
           description: ""
           sortKey: -1749156917450
@@ -44,12 +44,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:3333/api/rural-producers/a8ddb7c1-106c-4bc1-bb0b-e53b110557d0
+      - url: "{{ _.base_url }}/rural-producers/a8ddb7c1-106c-4bc1-bb0b-e53b110557d0"
         name: Update
         meta:
           id: req_178293d336094a808560b067f7e07539
           created: 1749172450083
-          modified: 1749175231342
+          modified: 1749437130660
           isPrivate: false
           description: ""
           sortKey: -1749156917400
@@ -74,12 +74,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:3333/api/rural-producers/b6f0979e-2ed5-4320-8b01-99c25a017580
+      - url: "{{ _.base_url }}/rural-producers/b6f0979e-2ed5-4320-8b01-99c25a017580"
         name: Delete
         meta:
           id: req_e707f6665a01461eb7b68468f4c9ddb8
           created: 1749178432412
-          modified: 1749178471249
+          modified: 1749437122361
           isPrivate: false
           description: ""
           sortKey: -1749156917350
@@ -95,12 +95,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.base_url }}/rural-producers/f285e77f-4acd-4c15-a15b-549b17706cd9"
+      - url: "{{ _.base_url }}/rural-producers/193ae453-de1b-421b-b069-64f370e776d7"
         name: Find By Id
         meta:
           id: req_9ec0bbd4bf104f28bc2f207da952379d
           created: 1749311901814
-          modified: 1749318071456
+          modified: 1749437156840
           isPrivate: false
           description: ""
           sortKey: -1749311901814
@@ -206,12 +206,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:3333/api/farms/32bd9ba7-c8b2-415f-b98e-077ba48d898b
+      - url: "{{ _.base_url }}/farms/32bd9ba7-c8b2-415f-b98e-077ba48d898b"
         name: Delete
         meta:
           id: req_5ce96df2b231488aabc315ada26d222f
           created: 1749235844061
-          modified: 1749236022755
+          modified: 1749437295547
           isPrivate: false
           description: ""
           sortKey: -1749235844061
@@ -386,7 +386,7 @@ environments:
   meta:
     id: env_f7b1987d26c8b7894846170e73b19b32ad67d488
     created: 1749156891193
-    modified: 1749261765275
+    modified: 1749437022153
     isPrivate: false
   data:
-    base_url: http://localhost:3333/api
+    base_url: http://localhost/api

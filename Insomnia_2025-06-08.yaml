@@ -1,0 +1,392 @@
+type: collection.insomnia.rest/5.0
+name: Brain Agriculture
+meta:
+  id: wrk_6bc92d17e3b1430dac96e29db5c6aaff
+  created: 1749156891184
+  modified: 1749156891184
+  description: ""
+collection:
+  - name: Rural Producers
+    meta:
+      id: fld_90e85ba4057a4e02aca82b69d7a21f05
+      created: 1749156914467
+      modified: 1749233955906
+      sortKey: -1749156914467
+      description: ""
+    children:
+      - url: http://localhost:3333/api/rural-producers
+        name: Create
+        meta:
+          id: req_4f519e253ad14dd99d75e4640a032c26
+          created: 1749156917450
+          modified: 1749312011124
+          isPrivate: false
+          description: ""
+          sortKey: -1749156917450
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Luiz Honorato",
+            	"document": "629.151.390-08"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/api/rural-producers/a8ddb7c1-106c-4bc1-bb0b-e53b110557d0
+        name: Update
+        meta:
+          id: req_178293d336094a808560b067f7e07539
+          created: 1749172450083
+          modified: 1749175231342
+          isPrivate: false
+          description: ""
+          sortKey: -1749156917400
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Luiz Honorato 2",
+            	"document": "385.406.208-71"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/api/rural-producers/b6f0979e-2ed5-4320-8b01-99c25a017580
+        name: Delete
+        meta:
+          id: req_e707f6665a01461eb7b68468f4c9ddb8
+          created: 1749178432412
+          modified: 1749178471249
+          isPrivate: false
+          description: ""
+          sortKey: -1749156917350
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/rural-producers/f285e77f-4acd-4c15-a15b-549b17706cd9"
+        name: Find By Id
+        meta:
+          id: req_9ec0bbd4bf104f28bc2f207da952379d
+          created: 1749311901814
+          modified: 1749318071456
+          isPrivate: false
+          description: ""
+          sortKey: -1749311901814
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/rural-producers"
+        name: Find All
+        meta:
+          id: req_b8ea30a0c44e4f33a0c2332da3016083
+          created: 1749327451129
+          modified: 1749328726306
+          isPrivate: false
+          description: ""
+          sortKey: -1749327451129
+        method: GET
+        parameters:
+          - id: pair_829c884070434495bb81c507781cb486
+            name: column
+            value: created_at
+            description: ""
+            disabled: false
+          - id: pair_af8ccb0c2c7046d8827fc7fde04f7b8b
+            name: order
+            value: DESC
+            description: ""
+            disabled: false
+          - id: pair_afc208d0cd984beeaa884e00ec1f224c
+            name: skip
+            value: "0"
+            description: ""
+            disabled: false
+          - id: pair_9b694eb26c2e47d281b56764bf637099
+            name: take
+            value: "10"
+            description: ""
+            disabled: false
+          - id: pair_53caf821439a40daa2c751118f1e5320
+            name: search
+            value: Luiz
+            description: ""
+            disabled: true
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Farms
+    meta:
+      id: fld_36a814e10a5142c78c3b322fa4df3e2a
+      created: 1749233962087
+      modified: 1749233962087
+      sortKey: -1749233962087
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/farms"
+        name: Create
+        meta:
+          id: req_fbd4f95649384ad790780e5bbadc8d1d
+          created: 1749233965160
+          modified: 1749240055648
+          isPrivate: false
+          description: ""
+          sortKey: -1749233965160
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Fazenda Estrela",
+            	"city": "Ribeirão Preto",
+            	"state": "SP",
+            	"rural_producer_id": "f285e77f-4acd-4c15-a15b-549b17706cd9",
+            	"total_area": 500.2,
+            	"arable_area": 200,
+            	"vegetation_area": 300.2
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/api/farms/32bd9ba7-c8b2-415f-b98e-077ba48d898b
+        name: Delete
+        meta:
+          id: req_5ce96df2b231488aabc315ada26d222f
+          created: 1749235844061
+          modified: 1749236022755
+          isPrivate: false
+          description: ""
+          sortKey: -1749235844061
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Harvests
+    meta:
+      id: fld_a82c1361611142cca5f937c060b9e2aa
+      created: 1749239417103
+      modified: 1749239417103
+      sortKey: -1749239417103
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/harvests"
+        name: Create
+        meta:
+          id: req_55594ae60ef34d9fb50969b4d6916a0f
+          created: 1749239469509
+          modified: 1749240036814
+          isPrivate: false
+          description: ""
+          sortKey: -1749239469509
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Safra 2025",
+            	"farm_id": "8014ed9b-67cf-42a3-9d93-02a13575a308",
+            	"year": 2025
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/harvests/1b4ea277-a419-463d-91d8-e8cb7687c6a2"
+        name: Delete
+        meta:
+          id: req_23dae965543d4bc6a6a09f9d17787142
+          created: 1749267307480
+          modified: 1749267512657
+          isPrivate: false
+          description: ""
+          sortKey: -1749267307480
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Plantations
+    meta:
+      id: fld_329ddab1a80f41008b94fdeabae4a0d7
+      created: 1749310089668
+      modified: 1749310089668
+      sortKey: -1749310089668
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/plantations"
+        name: Create
+        meta:
+          id: req_ac4e51d5b368477ca5f4068afcdbb40d
+          created: 1749310094839
+          modified: 1749310363658
+          isPrivate: false
+          description: ""
+          sortKey: -1749310094839
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"harvest_id": "5530a861-10c1-4617-a5e1-d59fafcb1bf2",
+            	"name": "Milho"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/plantations/b9f64870-2fff-46c2-9ef2-b6461c1a841f"
+        name: Delete
+        meta:
+          id: req_ec03971590b44696a9da31a272c24802
+          created: 1749311191204
+          modified: 1749311225668
+          isPrivate: false
+          description: ""
+          sortKey: -1749288701159.5
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Health
+    meta:
+      id: fld_57b0310860e54d6d9f3ca19139c61c31
+      created: 1749417507935
+      modified: 1749417507935
+      sortKey: -1749417507935
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/health"
+        name: Health
+        meta:
+          id: req_c66647fb14c744debb39397eb63e51b9
+          created: 1749417512008
+          modified: 1749434382916
+          isPrivate: false
+          description: ""
+          sortKey: -1749417512008
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_f7b1987d26c8b7894846170e73b19b32ad67d488
+    created: 1749156891201
+    modified: 1749156891201
+environments:
+  name: Base Environment
+  meta:
+    id: env_f7b1987d26c8b7894846170e73b19b32ad67d488
+    created: 1749156891193
+    modified: 1749261765275
+    isPrivate: false
+  data:
+    base_url: http://localhost:3333/api

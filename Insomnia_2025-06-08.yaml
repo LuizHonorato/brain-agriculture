@@ -95,12 +95,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.base_url }}/rural-producers/193ae453-de1b-421b-b069-64f370e776d7"
+      - url: "{{ _.base_url }}/rural-producers/4e22e52f-0ddb-4dfb-a003-b10a35c97675"
         name: Find By Id
         meta:
           id: req_9ec0bbd4bf104f28bc2f207da952379d
           created: 1749311901814
-          modified: 1749437156840
+          modified: 1749473782663
           isPrivate: false
           description: ""
           sortKey: -1749311901814
@@ -176,7 +176,7 @@ collection:
         meta:
           id: req_fbd4f95649384ad790780e5bbadc8d1d
           created: 1749233965160
-          modified: 1749240055648
+          modified: 1749473769713
           isPrivate: false
           description: ""
           sortKey: -1749233965160
@@ -188,7 +188,7 @@ collection:
             	"name": "Fazenda Estrela",
             	"city": "Ribeirão Preto",
             	"state": "SP",
-            	"rural_producer_id": "f285e77f-4acd-4c15-a15b-549b17706cd9",
+            	"rural_producer_id": "4e22e52f-0ddb-4dfb-a003-b10a35c97675",
             	"total_area": 500.2,
             	"arable_area": 200,
             	"vegetation_area": 300.2
@@ -390,3 +390,24 @@ environments:
     isPrivate: false
   data:
     base_url: http://localhost/api
+  subEnvironments:
+    - name: Production Environment
+      meta:
+        id: env_b565ecf51f2043c18a403bfdb7990ccd
+        created: 1749473101532
+        modified: 1749473382629
+        isPrivate: false
+        sortKey: 1749473101532
+      data:
+        base_url: https://brain-agriculture-production-cd5a.up.railway.app/api
+      color: "#fb1818"
+    - name: Local Environment
+      meta:
+        id: env_b76c49afd37d4156ac788b82019ea84a
+        created: 1749473204116
+        modified: 1749473391544
+        isPrivate: false
+        sortKey: 1749473204116
+      data:
+        base_url: http://localhost/api
+      color: "#d22eff"

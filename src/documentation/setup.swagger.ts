@@ -10,6 +10,10 @@ export function setupSwagger(app: INestApplication): void {
     )
     .setVersion('1.0')
     .addServer('http://localhost:3333', 'Local server')
+    .addServer(
+      'https://brain-agriculture-production-cd5a.up.railway.app/',
+      'Production server',
+    )
     .build();
 
   const document: OpenAPIObject = SwaggerModule.createDocument(app, config);

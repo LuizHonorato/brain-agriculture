@@ -9,7 +9,7 @@ export class AppController {
     description:
       'This endpoint is used to check the health of the application.',
   })
-  getHello(): string {
+  getHealth(): string {
     return 'Ok!';
   }
 }
